@@ -1,0 +1,171 @@
+$gradien-color: rgb(236, 255, 0);
+@mixin landscape {
+  @media (min-aspect-ratio: 1/1) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: #9acd32;
+  border: solid 14px yellow;
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: flex-start;
+}
+.all_card {
+  @include landscape {
+    display: flex;
+  }
+}
+.atribut {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 6px 16px 0;
+
+  @include landscape {
+    order: 1;
+  }
+}
+.pokemon_id {
+  font-size: 10px;
+}
+
+.pokemon_name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.pv {
+  color: red;
+  font-size: 20px;
+}
+
+.pokemon_all {
+  @include landscape {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1500px;
+  }
+}
+
+.nd_part {
+  @include landscape {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.pokemon {
+  margin: 2px 16px;
+  border: solid 5px $gradien-color;
+  @include landscape {
+    margin: 30px 40px 0px 40px;
+  }
+}
+
+.description {
+  margin: 6px 25px;
+  background-color: yellow;
+  text-align: center;
+  font-size: 13px;
+  @include landscape {
+    order: 3;
+    font-size: 15px;
+    margin: 6px 16px 0 16px;
+  }
+}
+
+.attac {
+  display: flex;
+  align-items: row;
+  flex-grow: 1;
+  justify-content: center;
+  margin: 0 25px 1px 10px;
+  margin-top: 70px;
+  @include landscape {
+    margin-top: 20px;
+    margin: 50px 25px 0px 0px;
+  }
+}
+
+.items {
+  display: flex;
+  align-items: center;
+}
+
+.attac_type {
+  display: flex;
+  flex-shrink: 0;
+  @include landscape {
+    align-self: center;
+    align-items: center;
+  }
+}
+
+.attac_txt {
+  text-align: left;
+  margin: 10px;
+  flex-shrink: 1;
+  @include landscape {
+    font-size: 18px;
+    margin: 0 5px 0 5px;
+  }
+}
+
+strong {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.damage {
+  font-size: 25px;
+}
+
+.descrip {
+  display: flex;
+  border-top: solid 2px black;
+  justify-content: space-between;
+  margin: 0 5px 0 5px;
+  margin-top: 80px;
+
+  @include landscape {
+    margin-top: 10px;
+  }
+}
+
+.descrip_txt {
+  font-weight: bold;
+  font-size: 15px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.extra {
+  border: solid 2px yellow;
+  margin: 6px 10px;
+  font-size: 14px;
+  text-align: left;
+
+  @include landscape {
+    margin-bottom: 25px;
+  }
+}
